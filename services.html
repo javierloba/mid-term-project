@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+	<title>Document</title>
+    <script>
+        tailwind.config = {
+            important: true,
+          theme: {
+            extend: {
+              colors: {
+                blue: {
+                    dark: '#072AC8',
+                    aqua: '#43D2FF',
+                    light: '#A2D6F9',
+                    pale: '#D1EDFF'
+                },
+                grey: {
+                    dark: '#292E47',
+                    storm: '#6B708D',
+                    ghost: '#F2F4FC',
+                    aliceblue: '#ECF7FF'
+                },
+                yellow: {
+                    golden: '#FFC600'
+                }
+              },
+            },
+            fontSize: {
+                '5xl': ['3.125rem', '1'],
+                '4xl': ['2.5rem', '1'],
+                lg: ['1.063rem', '1'],
+                sm: ['0.938rem', '1'],
+                xs: ['0.813rem', '1']
+            },
+            maxWidth: {
+                '5xl': '1100px'
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-grey-ghost flex justify-center m-auto">
+    <div class="max-w-5xl w-full mx-5">
+        <header class="h-[52px] mt-[70px] mb-[100px]">
+            <div class="flex justify-between items-center">
+                <div class="h-[52px] flex items-center">
+                    <img class="w-[60.52px] h-[18.46px]" src="./images/circle.svg" alt="logo" />
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex justify-center gap-[60px] ml-[12px] font-medium">
+                        <li><a href="/index.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Home</a></li>
+                        <li><a href="/projects.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Projects</a></li>
+                        <li><a href="/services.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Services</a></li>
+                    </ul>
+                </nav>
+                <button class="hidden md:block w-[150px] h-[52px] bg-blue-dark text-white text-lg font-medium">Contact Us</button>
+                <div class="flex md:hidden">
+                    <div class="menu-btn">
+                        <div class="menu-btn__burger"></div>
+                    </div>
+                </div>
+                <!-- <nav class="flex md:hidden absolute">
+                    <ul class="flex flex-col justify-center gap-[60px] ml-[12px] font-medium">
+                        <li><a href="/index.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Home</a></li>
+                        <li><a href="/projects.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Projects</a></li>
+                        <li><a href="/services.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Services</a></li>
+                    </ul>
+                </nav> -->
+            </div>
+        </header>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
