@@ -80,34 +80,26 @@ async function mergeData() {
 }
 
 async function buildPosts() {
-  let posts = await mergeData()
-    const imagenes = document.querySelectorAll('.image');
-    const titles = document.querySelectorAll('.title')
-    const subtitles = document.querySelectorAll('.subtitle')
+  let posts = await mergeData();
+  const imagenes = document.querySelectorAll('.image');
+  const titles = document.querySelectorAll('.title')
+  const subtitles = document.querySelectorAll('.subtitle')
 
-    for(i=0; i<imagenes.length; i++){
-      for(j=0; j<posts.length; j++){
-        imagenes[i].src = `"${posts[j].photo}"`
-      }
-    }
-    // for(i=0; i<posts.length; i++){
-    //   imagenes.forEach((image, j) =>{
-    //     image[j].src = posts[i].photo
-    //   })
-    // }
-    titles.forEach(title => {
-      posts.forEach(p => {
-        title.innerHTML = p.title
-      })
-    })
-    subtitles.forEach(subtitle => {
-      posts.forEach(p => {
-        subtitle.innerHTML = p.title
-      })
-    })
+  imagenes[0].src = posts[0].url
+  imagenes[1].src = posts[1].url
+  imagenes[2].src = posts[2].url
+
+  titles[0].innerHTML = posts[0].title.slice(0,15)
+  titles[1].innerHTML = posts[1].title.slice(0,15)
+  titles[2].innerHTML = posts[2].title.slice(0,12)
+
+  subtitles[0].innerHTML = posts[0].body
+  subtitles[1].innerHTML = posts[1].body
+  subtitles[2].innerHTML = posts[2].body
+    
 }
 
-buildPosts()
+window.addEventListener('load', buildPosts)
 
 
 // Contact
