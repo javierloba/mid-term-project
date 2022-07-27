@@ -33,6 +33,7 @@
             fontSize: {
                 '5xl': ['3.125rem', '1'],
                 '4xl': ['2.5rem', '1'],
+                xl: ['1.25rem', '1'],
                 lg: ['1.063rem', '1'],
                 sm: ['0.938rem', '1'],
                 xs: ['0.813rem', '1']
@@ -44,35 +45,179 @@
         }
       </script>
 </head>
-<body class="bg-grey-ghost flex justify-center m-auto">
-    <div class="max-w-5xl w-full mx-5">
-        <header class="h-[52px] mt-[70px] mb-[100px]">
+<body>
+    <div class="bg-grey-ghost flex flex-col items-center">
+
+        <!-- nav -->
+        <header class="z-50 bg-grey-ghost h-[52px] mt-[70px] mb-[100px] max-w-5xl w-11/12">
             <div class="flex justify-between items-center">
                 <div class="h-[52px] flex items-center">
                     <img class="w-[60.52px] h-[18.46px]" src="./images/circle.svg" alt="logo" />
                 </div>
-                <nav class="hidden md:block">
-                    <ul class="flex justify-center gap-[60px] ml-[12px] font-medium">
-                        <li><a href="/index.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Home</a></li>
-                        <li><a href="/projects.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Projects</a></li>
-                        <li><a href="/services.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Services</a></li>
+                <nav class="nav-small 
+                            hidden bg-grey-storm translate-y-[-50px] 
+                            md:block md:bg-transparent md:translate-y-0">
+                    <ul class="nav-small__links 
+                            flex justify-center flex-col gap-8 ml-0 font-medium
+                            md:flex-row md:gap-[60px] md:ml-[12px]">
+                        <li>
+                            <a href="/index.html" 
+                            class="text-grey-aliceblue text-lg font-medium transition-all duration-300
+                                hover:text-blue-dark
+                                md:text-grey-storm ">
+                            Home
+                        </a>
+                        </li>
+                        <li>
+                            <a href="/projects.html" 
+                            class="text-grey-aliceblue text-lg font-medium transition-all duration-300
+                                hover:text-blue-dark 
+                                md:text-grey-storm ">
+                            Projects
+                        </a>
+                        </li>
+                        <li>
+                            <a href="/services.html" 
+                            class="text-grey-aliceblue text-lg font-medium transition-all duration-300
+                                hover:text-blue-dark 
+                                md:text-grey-storm ">
+                            Services
+                        </a>
+                        </li>
                     </ul>
                 </nav>
-                <button class="hidden md:block w-[150px] h-[52px] bg-blue-dark text-white text-lg font-medium">Contact Us</button>
+                <button class="hidden w-[150px] h-[52px] bg-blue-dark text-white border-2 text-lg font-medium transition-all duration-300
+                            hover:bg-transparent hover:text-blue-dark hover:border-blue-dark
+                            md:block ">
+                    Contact Us
+                </button>
                 <div class="flex md:hidden">
                     <div class="menu-btn">
                         <div class="menu-btn__burger"></div>
                     </div>
                 </div>
-                <!-- <nav class="flex md:hidden absolute">
-                    <ul class="flex flex-col justify-center gap-[60px] ml-[12px] font-medium">
-                        <li><a href="/index.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Home</a></li>
-                        <li><a href="/projects.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Projects</a></li>
-                        <li><a href="/services.html" class="text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Services</a></li>
-                    </ul>
-                </nav> -->
             </div>
         </header>
+
+         <!-- projects -->
+         <section class="flex flex-col mb-[100px] max-w-5xl w-9/12
+                md:mb-[200px] md:w-11/12">
+        <h3 class="text-4xl capitalize font-bold mb-[70px]">Recent projects</h3>
+        <div class="grid grid-cols-1 gap-10
+                md:grid-cols-2 lg:grid-cols-3">
+        <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+            <img class="h-[240px] w-full object-cover" src="./images/projects-1.jpg" alt="">
+            <div class="ml-[30px] mb-8">
+                <h3 class="text-xl mb-2.5 mt-[30px]">Simplify</h3>
+                <p class="text-lg text-grey-storm mb-[54px]">UI Design & App Development</p>
+                <a class="text-blue-dark" href="">Learn more</a>
+            </div>
+        </div>
+        <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+            <img class="h-[240px] w-full object-cover" src="./images/projects-2.jpg" alt="">
+            <div class="ml-[30px] mb-8">
+                <h3 class="text-xl mb-2.5 mt-[30px]">Dashcoin</h3>
+                <p class="text-lg text-grey-storm mb-[54px]">Web Development</p>
+                <a class="text-blue-dark" href="">Learn more</a>
+            </div>
+        </div>
+        <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+            <img class="h-[240px] w-full object-cover" src="./images/projects-3.jpg" alt="">
+            <div class="ml-[30px] mb-8">
+                <h3 class="text-xl mb-2.5 mt-[30px]">Vectorify</h3>
+                <p class="text-lg text-grey-storm mb-[54px]">User Experience Design</p>
+                <a class="text-blue-dark" href="">Learn more</a>
+            </div>
+        </div>
+        </div>
+        </section>
+
+         <!-- contact -->
+         <section class="max-w-[1320px] h-[622px] bg-yellow-golden w-full mb-[200px]">
+            <div class="relative h-full bg-center bg-contain flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center w-11/12">
+                    <h3 class="text-grey-dark text-4xl text-center font-bold mb-[20px]">Do you have any questions?</h3>
+                    <h4 class="text-grey-dark text-xl w-[480px] text-center mb-[50px] w-[50%]
+                    md:w-full">Let us help you!</h4>
+                </div>
+                <div class="flex justify-center flex-col gap-4 w-[50%]
+                            md:flex-row">
+                    <div class="flex justify-center gap-4 w-full bg-white">
+                        <div>
+                            <img class="relative left-14 top-[28px] w-[30px]" src="./images/mail.svg" alt="mail">
+                        </div>
+                        <input class="w-full h-[80px] pl-12" type="text" placeholder="Enter your email">
+                    </div>
+                    <button class="w-full h-[80px] bg-blue-dark text-white border-blue-dark border-2 text-lg font-medium transition-all duration-300
+                                hover:bg-transparent hover:text-blue-dark hover:border-blue-dark
+                                md:block md:w-[198px]">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="max-w-5xl w-11/12 mb-[100px]">
+            <div class="flex flex-col justify-center items-center h-[112px] gap-20 
+                        md:flex-row md:justify-between md:items-start">
+                <div class="h-[52px] flex flex-col">
+                    <img class="w-[98.38px] h-[30px] mb-4 self-center
+                                md:self-start" 
+                    src="./images/circle.svg" alt="logo" />
+                    <div class="text-grey-storm text-center md:text-start">
+                        <p>2972 Westheimer Rd. Santa Ana,</p>
+                        <p>Illinois 85486</p>
+                    </div>
+                </div>
+                <div>
+                    <ul class="grid grid-cols-3 gap-8">
+                        <li class="place-self-center">
+                            <a href=""
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Team
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href="/services.html"
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Services
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href=""
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href=""
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Press
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href="/projects.html"
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href=""
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="main.js"></script>
 </body>

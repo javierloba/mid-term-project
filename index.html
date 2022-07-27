@@ -45,21 +45,57 @@
         }
       </script>
 </head>
-<body class="bg-grey-ghost flex justify-center m-auto">
-    <div class="max-w-5xl w-full mx-5">
-        <header class="sticky top-0 z-50 bg-grey-ghost h-[52px] mt-[70px] mb-[100px]">
+<body>
+    <div class="bg-grey-ghost flex flex-col items-center">
+
+        <!-- nav -->
+        <header class="z-50 bg-grey-ghost h-[52px] mt-[70px] mb-[100px] max-w-5xl w-11/12">
             <div class="flex justify-between items-center">
                 <div class="h-[52px] flex items-center">
                     <img class="w-[60.52px] h-[18.46px]" src="./images/circle.svg" alt="logo" />
                 </div>
-                <nav class="nav-small hidden md:block bg-grey-storm md:bg-transparent translate-y-[-50px] md:translate-y-0">
-                    <ul class="nav-small__links flex justify-center flex-col md:flex-row gap-8 md:gap-[60px] ml-0 md:ml-[12px] font-medium">
-                        <li><a href="/index.html" class="text-grey-aliceblue md:text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Home</a></li>
-                        <li><a href="/projects.html" class="text-grey-aliceblue md:text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Projects</a></li>
-                        <li><a href="/services.html" class="text-grey-aliceblue md:text-grey-storm hover:text-blue-dark text-lg font-medium transition-all duration-300">Services</a></li>
+                <nav class="nav-small 
+                            hidden bg-grey-storm translate-y-[-50px] 
+                            md:block md:bg-transparent md:translate-y-0">
+                    <ul class="nav-small__links 
+                            flex justify-center flex-col gap-8 ml-0 font-medium
+                            md:flex-row md:gap-[60px] md:ml-[12px]">
+                        <li>
+                            <a href="/index.html" 
+                            class="text-grey-aliceblue text-lg font-medium transition-all duration-300
+                                hover:text-blue-dark
+                                md:text-grey-storm ">
+                            Home
+                        </a>
+                        </li>
+                        <li>
+                            <a href="/projects.html" 
+                            class="text-grey-aliceblue text-lg font-medium transition-all duration-300
+                                hover:text-blue-dark 
+                                md:text-grey-storm ">
+                            Projects
+                        </a>
+                        </li>
+                        <li>
+                            <a href="/services.html" 
+                            class="text-grey-aliceblue text-lg font-medium transition-all duration-300
+                                hover:text-blue-dark 
+                                md:text-grey-storm ">
+                            Services
+                        </a>
+                        </li>
+                        <button class="m-auto w-[150px] h-[52px] bg-blue-dark text-white border-2 border-blue-dark text-lg font-medium transition-all duration-300
+                                    hover:bg-transparent hover:text-blue-dark hover:border-blue-dark
+                                    md:hidden ">
+                            <a href="/contact.html">Contact Us</a>
+                        </button>
                     </ul>
                 </nav>
-                <button class="hidden md:block w-[150px] h-[52px] bg-blue-dark text-white text-lg font-medium">Contact Us</button>
+                <button class="hidden w-[150px] h-[52px] bg-blue-dark text-white border-2 border-blue-dark text-lg font-medium transition-all duration-300
+                            hover:bg-transparent hover:text-blue-dark hover:border-blue-dark
+                            md:block ">
+                    <a href="/contact.html">Contact Us</a>
+                </button>
                 <div class="flex md:hidden">
                     <div class="menu-btn">
                         <div class="menu-btn__burger"></div>
@@ -68,35 +104,262 @@
             </div>
         </header>
 
-        <section>
-            <div class="flex justify-between items-center">
-                <div class="w-1/2">
-                    <h1 class="text-[60px] text-grey-dark font-bold capitalize leading-[70px] mb-[30px]">Empower your business with stunning design!</h1>
-                    <p class="text-xl text-grey-storm leading-[30px] w-4/5">Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
-                    <div class="flex justify-start gap-x-10 items-center mt-10">
-                        <button class="hidden md:block w-[150px] h-[52px] bg-blue-dark text-white text-lg font-medium">Get in touch</button>
-                        <span class="text-lg text-grey-storm">See our work</span>
+        <!-- hero -->
+        <section class="flex flex-col justify-center text-center gap-12 items-center max-w-5xl w-11/12
+                        lg:flex-row lg:justify-between lg:gap-0 lg:text-left">
+            <div class="w-11/12 lg:w-1/2">
+                <h1 class="text-[40px] text-grey-dark font-bold capitalize leading-[60px] mb-[30px]
+                            md:text-[60px] md:leading-[70px]">
+                    Empower your business with stunning design!
+                </h1>
+                <p class="text-center text-xl text-grey-storm leading-[30px] w-4/5 m-auto
+                        lg:text-left lg:m-0">
+                    Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.
+                </p>
+                <div class="flex justify-center gap-x-10 items-center mt-10
+                            lg:justify-start">
+                    <button class="w-[150px] h-[52px] bg-blue-dark text-white border-2 border-blue-dark text-lg font-medium transition-all duration-300
+                            hover:bg-transparent hover:text-blue-dark hover:border-blue-dark
+                            md:block">
+                            <a href="/contact.html">Get in touch</a>
+                    </button>
+                    <span class="text-lg text-grey-storm cursor-pointer">See our work</span>
+                </div>
+            </div>
+            <div class="w-1/2 h-[400px] flex
+                        sm:h-[550px] md:h-[637px]">
+                <div class="absolute">
+                    <img class="w-11/12 max-w-[570px] relative" 
+                        src="./images/hero-image.png" alt="hero">
+                    <img class="hidden absolute top-6 left-0 bottom-0 right-0 w-1/3 max-w-[190px]
+                                sm:block" 
+                        src="./images/card-1.png" alt="card">
+                    <img class="hidden absolute top-2/3 right-0 left-[60%] bottom-0 w-1/3 max-w-[190px]
+                                sm:block" 
+                        src="./images/card-2.png" alt="thumb">
+                </div>
+            </div>
+        </section>
+
+        <!-- logos -->
+        <section class="grid grid-cols-2 gap-12 justify-center mt-[80px] mb-[80px] max-w-5xl w-11/12
+                    lg:grid-cols-5 lg:gap-0 sm:grid-cols-3 md:mt-[130px] md:mb-[200px]">
+                <img class="place-self-center" src="./images/airbnb-logo.svg" alt="airbnb logo">
+                <img class="place-self-center" src="./images/google-logo.svg" alt="google logo">
+                <img class="place-self-center" src="./images/microsoft-logo.svg" alt="microsoft logo">
+                <img class="place-self-center" src="./images/fedex-logo.svg" alt="fedex logo">
+                <img class="place-self-center" src="./images/amazon-logo.svg" alt="amazon logo">
+        </section>
+
+        <!-- projects -->
+        <section class="flex flex-col mb-[100px] max-w-5xl w-9/12
+                        md:mb-[200px] md:w-11/12">
+            <h3 class="text-4xl capitalize font-bold mb-[70px]">Recent projects</h3>
+            <div class="grid grid-cols-1 gap-10
+                        md:grid-cols-2 lg:grid-cols-3">
+                <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+                    <img class="image 
+                                h-[240px] w-full object-cover" src="" alt="">
+                    <div class="ml-[30px] mb-8">
+                        <h3 class="title
+                                text-xl mb-2.5 mt-[30px]"></h3>
+                        <p class="subtitle
+                                text-lg text-grey-storm mb-[54px]">UI Design & App Development</p>
+                        <a class="text-blue-dark" href="/projects.html">Learn more</a>
                     </div>
                 </div>
-                <div class="w-1/2 h-[637px]">
-                    <div class="absolute">
-                        <img class="w-11/12 max-w-[570px] relative z-[-1]" src="./images/hero-image.png" alt="hero">
-                        <img class="absolute top-6 left-0 bottom-0 right-0 w-1/3 max-w-[190px]" src="./images/card-1.png" alt="card">
-                        <img class="absolute top-2/3 right-0 left-[60%] bottom-0 w-1/3 max-w-[190px]" src="./images/card-2.png" alt="thumb">
+                <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+                    <img class="image 
+                                h-[240px] w-full object-cover" src="" alt="">
+                    <div class="ml-[30px] mb-8">
+                        <h3 class="title
+                                text-xl mb-2.5 mt-[30px]"></h3>
+                        <p class="subtitle
+                        text-lg text-grey-storm mb-[54px]">Web Development</p>
+                        <a class="text-blue-dark" href="/projects.html">Learn more</a>
+                    </div>
+                </div>
+                <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+                    <img class="image 
+                                h-[240px] w-full object-cover" src="" alt="">
+                    <div class="ml-[30px] mb-8">
+                        <h3 class="title
+                                text-xl mb-2.5 mt-[30px]"></h3>
+                        <p class="subtitle
+                                text-lg text-grey-storm mb-[54px]">User Experience Design</p>
+                        <a class="text-blue-dark" href="/projects.html">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- testimonial -->
+        <section class="max-w-[1320px] h-[622px] bg-grey-dark w-full mb-[100px]
+                        md:mb-[200px]"> 
+            <div class="relative h-full bg-center bg-contain flex flex-col items-center justify-center" 
+                style="background-image: url(./images/orbit.png);">
+                <div class="flex flex-col items-center w-11/12">
+                    <h3 class="text-white text-4xl text-center mb-[104px]">Hear what our clients have to say</h3>
+                    <h4 class="text-yellow-golden text-xl w-[480px] text-center mb-[105px] leading-[38.4px] w-[50%]
+                                md:w-full">
+                        "Circle helped us through every stage of our startup. We really enjoyed working with you."
+                    </h4>
+                    <div class="flex justify-center gap-4">
+                        <img class="w-[50px] h-[50px] rounded-full object-cover" src="./images/profile.png" alt="profile picture">
+                        <div class="flex flex-col">
+                            <p class="text-blue-light">Kristin Watson</p>
+                            <span class="text-grey-ghost">Booking.com</span>
+                        </div>
+                    </div>
+                </div>
+                <img class="hidden absolute top-0 left-0 w-[20%]
+                    md:block" src="./images/memoji-1.png" alt="emoji">
+                <img class="hidden absolute top-0 right-0 w-[20%]
+                    md:block" src="./images/memoji-2.png" alt="emoji">
+                <img class="hidden absolute bottom-0 left-0 w-[20%]
+                    md:block" src="./images/memoji-3.png" alt="emoji">
+                <img class="hidden absolute bottom-0 right-0 w-[20%]
+                    md:block" src="./images/memoji-4.png" alt="emoji">
+            </div>
+        </section>
+
+        <!-- services -->
+        <section class="flex flex-col mb-[200px] max-w-5xl w-9/12
+                        md:mb-[200px] md:w-11/12">
+            <h3 class="text-4xl capitalize font-bold mb-[70px]">Our services</h3>
+            <div class="grid grid-cols-1 gap-10
+                        md:grid-cols-2 lg:grid-cols-3">
+                <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+                    <div class="h-[80px] w-[80px] ml-[30px] mt-[40px] bg-blue-pale rounded-full flex justify-center items-center">
+                        <img class="" src="./images/1.svg" alt="">
+                    </div>
+                    <div class="ml-[30px] mb-5">
+                        <h3 class="text-xl mb-5 mt-[30px] capitalize">User interface design</h3>
+                        <p class="text-lg text-grey-storm mb-[54px] w-11/12 h-[140px] leading-[30px]">
+                            Circle provides you with a stunning user interface design that is accesible to everyone.
+                        </p>
+                        <a class="text-blue-dark" href="/services.html">Learn more</a>
+                    </div>
+                </div>
+                <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+                    <div class="h-[80px] w-[80px] ml-[30px] mt-[40px] bg-blue-pale rounded-full flex justify-center items-center">
+                        <img class="" src="./images/2.svg" alt="">
+                    </div>
+                    <div class="ml-[30px] mb-5">
+                        <h3 class="text-xl mb-5 mt-[30px] capitalize">User experience design</h3>
+                        <p class="text-lg text-grey-storm mb-[54px] w-11/12 h-[140px] leading-[30px]">
+                            Circle always focuses on delivering the best user experience to your customers.
+                        </p>
+                        <a class="text-blue-dark" href="/services.html">Learn more</a>
+                    </div>
+                </div>
+                <div class="shadow-[0px_10px_40px_-19px_rgba(0,0,0,0.75)] basis-1/3">
+                    <div class="h-[80px] w-[80px] ml-[30px] mt-[40px] bg-blue-pale rounded-full flex justify-center items-center">
+                        <img class="" src="./images/3.svg" alt="">
+                    </div>
+                    <div class="ml-[30px] mb-5">
+                        <h3 class="text-xl mb-5 mt-[30px] capitalize">Aplication development</h3>
+                        <p class="text-lg text-grey-storm mb-[54px] w-11/12 h-[140px] leading-[30px]">
+                            We develop high-quality mobile and web applications using the latest technology stack.
+                        </p>
+                        <a class="text-blue-dark" href="/services.html">Learn more</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="flex justify-between items-center mt-[130px] mb-[200px]">
-                <img src="./images/airbnb-logo.svg" alt="airbnb logo">
-                <img src="./images/google-logo.svg" alt="google logo">
-                <img src="./images/microsoft-logo.svg" alt="microsoft logo">
-                <img src="./images/fedex-logo.svg" alt="fedex logo">
-                <img src="./images/amazon-logo.svg" alt="amazon logo">
+        <!-- contact -->
+        <section class="max-w-[1320px] h-[622px] bg-yellow-golden w-full mb-[200px]">
+            <div class="relative h-full bg-center bg-contain flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center w-11/12">
+                    <h3 class="text-grey-dark text-4xl text-center font-bold mb-[20px]">Do you have any questions?</h3>
+                    <h4 class="text-grey-dark text-xl w-[480px] text-center mb-[50px] w-[50%]
+                    md:w-full">Let us help you!</h4>
+                </div>
+                <form class="form" id="form"></form>
+                <div class="flex justify-center flex-col gap-4 w-[50%]
+                            md:flex-row">
+                    <div class="relative left-1 top-[32%] w-[30px]
+                                md:left-14">
+                        <img src="./images/mail.svg" alt="mail">
+                    </div>
+                    <div class="flex justify-center gap-0 w-full
+                                md:gap-4">
+                        <input id="question" class="w-full h-[80px] pl-[16%]
+                                    md:pl-[20%]" 
+                        type="text" placeholder="Enter your email">
+                    </div>
+                    <button class="w-full h-[80px] bg-blue-dark text-white border-blue-dark border-2 text-lg font-medium transition-all duration-300
+                                hover:bg-transparent hover:text-blue-dark hover:border-blue-dark
+                                md:block md:w-[198px]">
+                        Subscribe
+                    </button>
+                </div>
             </div>
         </section>
+
+        <!-- footer -->
+        <footer class="max-w-5xl w-11/12 mb-[100px]">
+            <div class="flex flex-col justify-center items-center h-[112px] gap-20 
+                        md:flex-row md:justify-between md:items-start">
+                <div class="h-[52px] flex flex-col">
+                    <img class="w-[98.38px] h-[30px] mb-4 self-center
+                                md:self-start" 
+                    src="./images/circle.svg" alt="logo" />
+                    <div class="text-grey-storm text-center md:text-start">
+                        <p>2972 Westheimer Rd. Santa Ana,</p>
+                        <p>Illinois 85486</p>
+                    </div>
+                </div>
+                <div>
+                    <ul class="grid grid-cols-3 gap-4
+                            md:gap-8">
+                        <li class="place-self-center">
+                            <a href=""
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Team
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href="/services.html"
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Services
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href=""
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href=""
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Press
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href="/projects.html"
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="place-self-center">
+                            <a href=""
+                            class="text-grey-storm text-lg transition-all duration-300
+                                hover:text-blue-dark">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="main.js"></script>
 </body>

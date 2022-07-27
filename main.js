@@ -15,6 +15,19 @@ document.onreadystatechange = () => {
   }
 };
 
+// Title focus
+
+const title = document.title;
+const blurMessage = "Hey, come back!";
+
+window.addEventListener("blur", function() {
+  document.title = blurMessage
+});
+
+window.addEventListener("focus", function() {
+  document.title = title;
+})
+
 // Lógica menú burger
 
 const menuBtn = document.querySelector('.menu-btn');
@@ -46,3 +59,57 @@ menuBtn.addEventListener('click', () => {
     menuOpen = false;
   }
 })
+
+// API fetch
+
+async function mergeData() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const resPhotos = await fetch('https://jsonplaceholder.typicode.com/photos');
+  const posts = await response.json();
+  const images = await resPhotos.json();
+
+  images.forEach(img => {
+    delete img.albumId
+    delete img.thumbnailUrl
+    delete img.title
+  })
+
+  let data = posts.map((item, i) => Object.assign({}, item, images[i]))
+
+  return data
+}
+
+async function buildPosts() {
+  let posts = await mergeData()
+    const imagenes = document.querySelectorAll('.image');
+    const titles = document.querySelectorAll('.title')
+    const subtitles = document.querySelectorAll('.subtitle')
+
+    for(i=0; i<imagenes.length; i++){
+      for(j=0; j<posts.length; j++){
+        imagenes[i].src = `"${posts[j].photo}"`
+      }
+    }
+    // for(i=0; i<posts.length; i++){
+    //   imagenes.forEach((image, j) =>{
+    //     image[j].src = posts[i].photo
+    //   })
+    // }
+    titles.forEach(title => {
+      posts.forEach(p => {
+        title.innerHTML = p.title
+      })
+    })
+    subtitles.forEach(subtitle => {
+      posts.forEach(p => {
+        subtitle.innerHTML = p.title
+      })
+    })
+}
+
+buildPosts()
+
+
+// Contact
+
+const question = document.querySelector('#question');
